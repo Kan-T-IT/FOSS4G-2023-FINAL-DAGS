@@ -18,4 +18,10 @@ dummy_task = BashOperator(
     dag=dag,
 )
 
+bash_task = BashOperator(
+    task_id='bash_task',
+    bash_command='echo "This is a bash task"',
+    dag=dag,
+)
+
 dummy_task >> bash_task
